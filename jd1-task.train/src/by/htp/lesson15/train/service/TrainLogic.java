@@ -7,8 +7,8 @@ import by.htp.lesson15.train.bean.Train;
 public class TrainLogic {
 	public Train findTrainByNumber(List<Train> trains, int trainNumber) {
 
-		for (Train train : trains) {// Перебор всех элементов массива и коллекциии. в i элементе будет ссылка на
-									// итый элемент коллекции Train
+		for (Train train : trains) {// РџРµСЂРµР±РѕСЂ РІСЃРµС… СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° Рё РєРѕР»Р»РµРєС†РёРёРё. РІ i СЌР»РµРјРµРЅС‚Рµ Р±СѓРґРµС‚ СЃСЃС‹Р»РєР° РЅР°
+									// РёС‚С‹Р№ СЌР»РµРјРµРЅС‚ РєРѕР»Р»РµРєС†РёРё Train
 
 			if (train.getNumberOfTrain() == trainNumber) {
 				return train;
@@ -18,7 +18,7 @@ public class TrainLogic {
 
 	}
 
-	public void sortByNumber(List<Train> trains) { // < > передача коллекции
+	public void sortByNumber(List<Train> trains) { // < > РїРµСЂРµРґР°С‡Р° РєРѕР»Р»РµРєС†РёРё
 
 		for (int i = 0; i < trains.size() - 1; i++) {
 			int minTrainNumber = trains.get(i).getNumberOfTrain();
@@ -34,11 +34,11 @@ public class TrainLogic {
 
 			}
 			
-			// запоминаем значение, адрес объекта Train
-			Train temp1 = trains.get(i);	//поезд сейчас
-			Train temp2 = trains.get(minTrainNumberIndex);	//Поезд с миниальным индексом
+			// Р·Р°РїРѕРјРёРЅР°РµРј Р·РЅР°С‡РµРЅРёРµ, Р°РґСЂРµСЃ РѕР±СЉРµРєС‚Р° Train
+			Train temp1 = trains.get(i);	//РїРѕРµР·Рґ СЃРµР№С‡Р°СЃ
+			Train temp2 = trains.get(minTrainNumberIndex);	//РџРѕРµР·Рґ СЃ РјРёРЅРёР°Р»СЊРЅС‹Рј РёРЅРґРµРєСЃРѕРј
 			
-			// меняем поезда местами//меняем местами коллекции
+			// РјРµРЅСЏРµРј РїРѕРµР·РґР° РјРµСЃС‚Р°РјРё//РјРµРЅСЏРµРј РјРµСЃС‚Р°РјРё РєРѕР»Р»РµРєС†РёРё
 			trains.set(i, temp2);
 			trains.set(minTrainNumberIndex, temp1);
 			}
