@@ -8,8 +8,8 @@ import by.htp.lesson15.train.bean.Train;
 
 public class TrainConsoleInput {
 	
-	public List<Train> create(){	//в этом методе спрятан процесс создания списка поездов
-		List<Train> trains = new ArrayList<Train>();	//создан готовый объект-коллекция (безразмерный массив ArrayList)
+	public List<Train> create(){	//РІ СЌС‚РѕРј РјРµС‚РѕРґРµ СЃРїСЂСЏС‚Р°РЅ РїСЂРѕС†РµСЃСЃ СЃРѕР·РґР°РЅРёСЏ СЃРїРёСЃРєР° РїРѕРµР·РґРѕРІ
+		List<Train> trains = new ArrayList<Train>();	//СЃРѕР·РґР°РЅ РіРѕС‚РѕРІС‹Р№ РѕР±СЉРµРєС‚-РєРѕР»Р»РµРєС†РёСЏ (Р±РµР·СЂР°Р·РјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ ArrayList)
 	
 	Train tr = new Train(123, "Minsk", new Date(2020,2,12,13,12));
 	trains.add(tr);
