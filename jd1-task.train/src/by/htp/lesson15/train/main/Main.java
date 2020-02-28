@@ -16,8 +16,8 @@ public class Main {
 
 		TrainLogic logic = new TrainLogic();
 
-		List<Train> trains; // список поездов
-		trains = input.create(); // запрашиваем input списка поездов
+		List<Train> trains; // СЃРїРёСЃРѕРє РїРѕРµР·РґРѕРІ
+		trains = input.create(); // Р·Р°РїСЂР°С€РёРІР°РµРј input СЃРїРёСЃРєР° РїРѕРµР·РґРѕРІ
 
 		logic.sortByNumber(trains);
 
@@ -25,7 +25,7 @@ public class Main {
 
 		UserInputInformation scan = new UserInputInformation();
 
-		int trainInfo = scan.trainInfo(trains); // запрос номера поезда от пользователя
+		int trainInfo = scan.trainInfo(trains); // Р·Р°РїСЂРѕСЃ РЅРѕРјРµСЂР° РїРѕРµР·РґР° РѕС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 		view.printInfo(trains, trainInfo);
 
 	}
