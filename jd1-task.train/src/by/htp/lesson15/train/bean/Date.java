@@ -102,8 +102,9 @@ public class Date implements Serializable {
 
 		@Override
 		public String toString() {
-			return "" + day + "." + month + "." + year + " года в " + hour + " часов " + minute
-					+ " минут";
+			return "" + day + "." + month + "." + year + " РіРѕРґР° РІ " + hour + " С‡Р°СЃРѕРІ " + minute
+					+ " РјРёРЅСѓС‚";
 		}
 
 	}
+
