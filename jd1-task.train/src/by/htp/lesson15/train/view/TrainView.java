@@ -18,13 +18,13 @@ public class TrainView {
 
 	}
 
-	public void printInfo(List<Train> trains, int trainInfo) { // вывод информации о поезде на консоль
+	public void printInfo(List<Train> trains, int trainInfo) { // РІС‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РїРѕРµР·РґРµ РЅР° РєРѕРЅСЃРѕР»СЊ
 
 		for (Train train : trains) {
 
 			if (train.getNumberOfTrain() == trainInfo) {
-				System.out.println("Поезд номер " + train.getNumberOfTrain() + ", следующий до станции "
-						+ train.getNameOfTown() + ", отправляется: " + train.getDate());
+				System.out.println("РџРѕРµР·Рґ РЅРѕРјРµСЂ " + train.getNumberOfTrain() + ", СЃР»РµРґСѓСЋС‰РёР№ РґРѕ СЃС‚Р°РЅС†РёРё "
+						+ train.getNameOfTown() + ", РѕС‚РїСЂР°РІР»СЏРµС‚СЃСЏ: " + train.getDate());
 
 			}
 
