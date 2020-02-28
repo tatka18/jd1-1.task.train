@@ -10,7 +10,7 @@ public class UserInputInformation {
 	public int trainInfo(List<Train> trains) {
 
 		Scanner sc = new Scanner(System.in);
-		String message = "Введите номер поезда>> ";
+		String message = "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РїРѕРµР·РґР°>> ";
 
 		int number;
 
@@ -22,15 +22,15 @@ public class UserInputInformation {
 			while (checkOut(trains, number) == false) {
 
 				System.out.println(
-						"Поезда, согласно введенным вами данным, не существует\nПопробуйте еще раз, либо обратитесь в справочную службу "
-								+ "для получения дополнительной информации");
+						"РџРѕРµР·РґР°, СЃРѕРіР»Р°СЃРЅРѕ РІРІРµРґРµРЅРЅС‹Рј РІР°РјРё РґР°РЅРЅС‹Рј, РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚\nРџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·, Р»РёР±Рѕ РѕР±СЂР°С‚РёС‚РµСЃСЊ РІ СЃРїСЂР°РІРѕС‡РЅСѓСЋ СЃР»СѓР¶Р±Сѓ "
+								+ "РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё");
 				System.out.println();
 
 				if (exitContinue(sc) == true) {
 					System.out.println(message);
 
 				} else {
-					System.out.println("Спасибо, что пользуетесь нашими услугами!");
+					System.out.println("РЎРїР°СЃРёР±Рѕ, С‡С‚Рѕ РїРѕР»СЊР·СѓРµС‚РµСЃСЊ РЅР°С€РёРјРё СѓСЃР»СѓРіР°РјРё!");
 					break;
 				}
 				number = scan(sc, message);
@@ -46,23 +46,23 @@ public class UserInputInformation {
 
 	}
 
-	public int scan(Scanner sc, String message) { // метод для исключения ситуации ввода пользователем некорректных
-													// данных
+	public int scan(Scanner sc, String message) { // РјРµС‚РѕРґ РґР»СЏ РёСЃРєР»СЋС‡РµРЅРёСЏ СЃРёС‚СѓР°С†РёРё РІРІРѕРґР° РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј РЅРµРєРѕСЂСЂРµРєС‚РЅС‹С…
+													// РґР°РЅРЅС‹С…
 
 		while (sc.hasNextInt() == false) {
 
 			String str = sc.next();
 
-			System.out.println("Вы ввели " + str
-					+ ", что является некорректным вводом. Необходимо ввести НОМЕР поезда. Попробуйте еще раз\n>>");
+			System.out.println("Р’С‹ РІРІРµР»Рё " + str
+					+ ", С‡С‚Рѕ СЏРІР»СЏРµС‚СЃСЏ РЅРµРєРѕСЂСЂРµРєС‚РЅС‹Рј РІРІРѕРґРѕРј. РќРµРѕР±С…РѕРґРёРјРѕ РІРІРµСЃС‚Рё РќРћРњР•Р  РїРѕРµР·РґР°. РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·\n>>");
 		}
 
 		return sc.nextInt();
 
 	}
 
-	public boolean checkOut(List<Train> trains, int x) { // проверка на наличие номера поезда, запрашиваемого
-															// пользователем
+	public boolean checkOut(List<Train> trains, int x) { // РїСЂРѕРІРµСЂРєР° РЅР° РЅР°Р»РёС‡РёРµ РЅРѕРјРµСЂР° РїРѕРµР·РґР°, Р·Р°РїСЂР°С€РёРІР°РµРјРѕРіРѕ
+															// РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј
 
 		for (Train train : trains) {
 
@@ -74,14 +74,14 @@ public class UserInputInformation {
 
 	}
 
-	public boolean exitContinue(Scanner sc) { // выход из поиска/продолжить поиск
+	public boolean exitContinue(Scanner sc) { // РІС‹С…РѕРґ РёР· РїРѕРёСЃРєР°/РїСЂРѕРґРѕР»Р¶РёС‚СЊ РїРѕРёСЃРє
 		int x;
-		System.out.println("Нажмите 1 чтобы продолжить\nНажмите 0 чтобы выйти");
+		System.out.println("РќР°Р¶РјРёС‚Рµ 1 С‡С‚РѕР±С‹ РїСЂРѕРґРѕР»Р¶РёС‚СЊ\nРќР°Р¶РјРёС‚Рµ 0 С‡С‚РѕР±С‹ РІС‹Р№С‚Рё");
 
 		x = sc.nextInt();
 
 		while (x != 0 && x != 1) {
-			System.out.println("Нажмите 1 чтобы продолжить\nНажмите 0 чтобы выйти");
+			System.out.println("РќР°Р¶РјРёС‚Рµ 1 С‡С‚РѕР±С‹ РїСЂРѕРґРѕР»Р¶РёС‚СЊ\nРќР°Р¶РјРёС‚Рµ 0 С‡С‚РѕР±С‹ РІС‹Р№С‚Рё");
 			x = sc.nextInt();
 		}
 
