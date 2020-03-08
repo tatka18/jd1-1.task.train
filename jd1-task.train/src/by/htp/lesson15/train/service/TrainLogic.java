@@ -45,9 +45,29 @@ public class TrainLogic {
 		
 
 	}
-	public Train find(int trainNumber) {
-		//stub
-		return null;
+	public void sortByStation(List<Train> trains) {
+
+		for (int i = 0; i < trains.size(); i++) {
+			String nameOfStation = trains.get(i).getNameOfTown();
+			int minNameOfStationIndex = i;
+
+			for (int j = i + 1; j < trains.size(); j++) {
+				String nameOfStationNext = trains.get(j).getNameOfTown();
+
+				if (nameOfStation.compareTo(nameOfStationNext) > 0) {
+					nameOfStation = nameOfStationNext;
+					minNameOfStationIndex = j;
+				}
+
+			}
+			Train tr1 = trains.get(i);
+			Train tr2 = trains.get(minNameOfStationIndex);
+
+			trains.set(i, tr2);
+			trains.set(minNameOfStationIndex, tr1);
+
+		}
+
 	}
 
 }
