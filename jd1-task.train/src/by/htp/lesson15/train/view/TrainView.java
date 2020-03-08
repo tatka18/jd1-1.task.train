@@ -25,10 +25,17 @@ public class TrainView {
 			if (train.getNumberOfTrain() == trainInfo) {
 				System.out.println("Поезд номер " + train.getNumberOfTrain() + ", следующий до станции "
 						+ train.getNameOfTown() + ", отправляется: " + train.getDate());
-
 			}
 
 		}
 	}
 
+	public void printSortByStation(List<Train> trains) {	//вывод отсортированных по имени станции на консоль
+		System.out.println("------------------------------------\nSorting by station:\n");
+
+		for (Train train : trains) {
+			System.out.println("TRAIN: " + train.getNameOfTown() + "\n\tномер " + train.getNumberOfTrain() + " отправляется "
+					+ train.getDate());
+		}
+	}
 }
