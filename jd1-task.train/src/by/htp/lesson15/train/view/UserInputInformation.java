@@ -10,7 +10,7 @@ public class UserInputInformation {
 	public int trainInfo(List<Train> trains) {
 
 		Scanner sc = new Scanner(System.in);
-		String message = "Введите номер поезда>> ";
+		String message = "-------------------------------------------------------------\nВведите номер поезда>> ";
 
 		int number;
 
@@ -53,7 +53,7 @@ public class UserInputInformation {
 
 			String str = sc.next();
 
-			System.out.println("Вы ввели " + str
+			System.out.println("Вы ввели " + "'" + str + "'"
 					+ ", что является некорректным вводом. Необходимо ввести НОМЕР поезда. Попробуйте еще раз\n>>");
 		}
 
