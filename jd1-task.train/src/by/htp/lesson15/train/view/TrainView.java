@@ -30,7 +30,7 @@ public class TrainView {
 		}
 	}
 
-	public void printSortByStation(List<Train> trains) {	//вывод отсортированных по имени станции на консоль
+	public void sortByStation(List<Train> trains) {
 		System.out.println("------------------------------------\nSorting by station:\n");
 
 		for (Train train : trains) {
@@ -38,4 +38,5 @@ public class TrainView {
 					+ train.getDate());
 		}
 	}
+
 }
