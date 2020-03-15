@@ -120,37 +120,38 @@ public class TrainLogic {
 	public void sortByDate(List<Train> trains, List<Integer> list) {
 
 		for (int i = list.get(0); i <= list.get(1); i++) {
+			
 			int trainMinimIndex = i;
 
-			for (int j = i + 1; j < list.get(1); j++) {
+			for (int j = i + 1; j <= list.get(1); j++) {
 				int trainHour = trains.get(i).getDate().getHour();
 				int trainHourNext = trains.get(j).getDate().getHour();
-				trainMinimIndex = j;
-
-				if (trainHour > trainHourNext) {
+				
+				if (trainHour < trainHourNext) {
 					trainHourNext = trainHour;
-
+					trainMinimIndex = j;
 				}
 
 				if (trainHour == trainHourNext) {
 					int trainMinute = trains.get(i).getDate().getMinute();
 					int trainMinuteNext = trains.get(j).getDate().getMinute();
 
-					if (trainMinute > trainMinuteNext) {
+					if (trainMinute < trainMinuteNext) {
 						trainHourNext = trainHour;
+						trainMinimIndex = j;
 
 					}
 
 				}
-				Train tr1 = trains.get(i);
-				Train tr2 = trains.get(trainMinimIndex);
-
-				trains.set(trainMinimIndex, tr1);
-				trains.set(i, tr2);
 
 			}
+			Train tr1 = trains.get(i);
+			Train tr2 = trains.get(trainMinimIndex);
+
+			trains.set(trainMinimIndex, tr1);
+			trains.set(i, tr2);
 
 		}
-	}
 
+	}
 }
