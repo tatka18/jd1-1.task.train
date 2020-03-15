@@ -22,14 +22,19 @@ public class Main {
 		logic.sortByNumber(trains);
 
 		view.print(trains);
-		
-		logic.sortByStation(trains);	
-		view.printSortByStation(trains);
 
-		UserInputInformation scan = new UserInputInformation();
+		logic.sortByStation(trains);
+		view.sortByStation(trains);
 
-		int trainInfo = scan.trainInfo(trains); // запрос номера поезда от пользователя
-		view.printInfo(trains, trainInfo);	//вывод данных о поезде на консоль
+		logic.starting(trains);
+
+		view.sortByStation(trains);
+
+		//UserInputInformation scan = new UserInputInformation();
+
+		// int trainInfo = scan.trainInfo(trains); // запрос номера поезда от
+		// пользователя
+		// view.printInfo(trains, trainInfo); // вывод данных о поезде на консоль
 
 	}
 
